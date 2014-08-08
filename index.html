@@ -47,7 +47,25 @@
 		                url('img/loading.gif') 
 		                50% 50% 
 		                no-repeat;
-			}
+	  }
+			
+	  #infoBox{
+			display: block;
+			position: absolute;
+			top: 70px;
+			left: 10px;
+			background-color: rgba(38, 38, 38, 0.75);
+			border: 1px solid #444;
+			padding: 6px;
+			overflow: auto;
+			border-radius: 10px;			
+			font-family: sans-serif;
+			font-size: 10pt;
+			text-align: left;
+			color: #edffff;
+			border-bottom: 1px solid #888;
+			margin-bottom: 4px;
+	  }	
 
       body {
           padding: 0;
@@ -62,6 +80,8 @@
   <div id="loading"></div>
   <div id="cesiumContainer"></div>
   <div id="dateSlider"></div>
+  <div id="infoBox"></div>
+  
   
   <script src="index.js"></script>
 </body>
