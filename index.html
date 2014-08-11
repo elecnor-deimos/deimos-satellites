@@ -30,7 +30,7 @@
       
       #dateSlider {
             position: absolute;
-            bottom: 3%;
+            bottom: 5%;
             left: 5%;
             width: 90%;
       }
@@ -49,11 +49,9 @@
 		                no-repeat;
 	  }
 			
-	  #infoBox{
+	  #debugBox, #dataBox, #infoBox{
 			display: block;
-			position: absolute;
-			top: 70px;
-			left: 10px;
+			position: absolute;	
 			background-color: rgba(38, 38, 38, 0.75);
 			border: 1px solid #444;
 			padding: 6px;
@@ -61,11 +59,30 @@
 			border-radius: 10px;			
 			font-family: sans-serif;
 			font-size: 10pt;
-			text-align: left;
+			text-align: center;
 			color: #edffff;
 			border-bottom: 1px solid #888;
 			margin-bottom: 4px;
 	  }	
+	  	  
+	  #debugBox{			
+			top: 70px;	
+			left: 10px;
+			height: 5%;
+			width : 20%;	
+	  }	
+	  
+	  #dataBox{			
+			top: 190px;		
+			left: 10px;	
+			width : 20%;
+	  }	
+	  
+	  #infoBox{			
+			bottom: 150px;	
+			right: 10px;	
+			width : 15%;	
+	  }		  
 
       body {
           padding: 0;
@@ -80,7 +97,18 @@
   <div id="loading"></div>
   <div id="cesiumContainer"></div>
   <div id="dateSlider"></div>
-  <div id="infoBox"></div>
+  <div id="debugBox"></div>
+  <div id="dataBox">
+  		<div id="opp"></div>
+  		<div id="globalData"></div>
+		<img id= "imgSelected">
+  	  	<div id="selectedData"></div>
+  </div>
+  <div id="infoBox">
+  		TIME_SLIDER <br> select a start and end date in order to display footprints relative to that timerange <br> --- <br>
+  		LEFT_MOUSE_DOUBLE_CLICK <br> on a footprint allows to visualize preview and information of that image <br> --- <br>
+  		RIGHT_MOUSE_CLICK <br> if you want to browse the underlying images one by one <br>
+  </div>
   
   
   <script src="index.js"></script>
