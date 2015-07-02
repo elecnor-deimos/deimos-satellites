@@ -121,13 +121,13 @@ function importGeoJSON(){
 	var stopMonth = adaptDates[4];
 	var stopYear = adaptDates[5];	
 	
-	var promise = geojsonDataSource.loadUrl('http://dms-coverage.cartodb.com/api/v2/sql?'+
+	var promise = geojsonDataSource.loadUrl('http://elecnor-deimos.cartodb.com/api/v2/sql?'+
 											'format=GeoJSON'+
 											'&q=SELECT%20*%20FROM%20deimos_1_scenes%20where%20image_date%20BETWEEN%20'+
 											'%27'+ startYear + startMonth + startDay +'%2000:00:00.000%27'+
 											'%20AND%20'+
 											'%27'+ stopYear + stopMonth + stopDay +'%2000:00:00.000%27'+
-											'&api_key=cfe0a8d8ed214abdd0e1f735e77ac2972a76a916');
+											'&api_key=a62745a5151fa50609933469281541bd20f38a31');
 			
 			
 	promise.then(function(){	
@@ -224,7 +224,7 @@ function highlightOpp(movement){
     	var stopYear = adaptDates[5];	
     	var that = this;
     	
-    	var promise = this._dataSource.loadUrl( 'http://dms-coverage.cartodb.com/api/v2/sql?'+
+    	var promise = this._dataSource.loadUrl( 'http://elecnor-deimos.cartodb.com/api/v2/sql?'+
     			'format=GeoJSON'+
     			'&q=SELECT%20*%20FROM%20deimos_1_scenes%20where%20'+
     			'(ST_Intersects(%20the_geom,%20ST_SetSRID(ST_POINT('+ this._longitudeDegrees + ',' + this._latitudeDegrees + ')%20,%204326)))'+
@@ -232,7 +232,7 @@ function highlightOpp(movement){
     			'%27'+ startYear + startMonth + startDay +'%2000:00:00.000%27'+
     			'%20AND%20'+
     			'%27'+ stopYear + stopMonth + stopDay + '%2000:00:00.000%27)'+
-    			'&api_key=cfe0a8d8ed214abdd0e1f735e77ac2972a76a916');
+    			'&api_key=a62745a5151fa50609933469281541bd20f38a31');
     	
     	promise.then(function(){        				
         	that._viewer.dataSources.add(that._dataSource);
