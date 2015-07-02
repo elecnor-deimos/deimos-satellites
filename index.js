@@ -23,7 +23,7 @@ var outlineColorSelected = Cesium.Color.ORANGERED;
 var materialColorSelected = Cesium.Color.ORANGE;
 
 //dates retrieving from cartoDb
-var dates = $.getJSON( 'http://dms-coverage.cartodb.com/api/v2/sql?q=SELECT%20MIN(image_date)%20AS%20min_date,%20MAX%20(image_date)%20AS%20max_date%20FROM%20deimos_1_scenes&api_key=cfe0a8d8ed214abdd0e1f735e77ac2972a76a916', success);
+var dates = $.getJSON( 'http://dms-coverage.cartodb.com/api/v2/sql?q=SELECT%20MIN(image_date)%20AS%20min_date,%20MAX%20(image_date)%20AS%20max_date%20FROM%20deimos_1_scenes&api_key=a62745a5151fa50609933469281541bd20f38a31', success);
 function success(){
 		
 	var minDate = new Date(dates.responseJSON.rows[0].min_date);	
